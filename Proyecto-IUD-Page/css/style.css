@@ -1,0 +1,33 @@
+*{
+    border-style: dashed;
+    margin: 0;
+}
+ 
+body{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;  
+}
+ 
+.container{
+    background-color: #293462;
+}
+ 
+.header{
+    background-color: #F24C4C;
+}
+ 
+.nav{
+    background-color: #EC9B3B;
+}
+ 
+.slider{
+    background-color: #F7D716;
+}
+ 
+.section{
+    background-color: #F24C4C;
+}
+ 
+.footer{
+    background-color: #293462;
+}
