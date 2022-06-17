@@ -3,19 +3,19 @@
     margin: 0;*/
     box-sizing: border-box;
 }
- 
+
 body{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;  
 }
- 
+
 a{
     text-decoration: none;
 }
- 
+
 .container{
    display: grid;
-   grid-template-areas:
+   grid-template-areas: 
    'header header header'
    'nav nav nav'
    'slider slider slider'
@@ -25,55 +25,55 @@ a{
    column-gap: 10px;
    align-items: center;
 }
- 
+
 /*
     header
-*/
+*/ 
 .header{
     grid-area: header;
     background-color: #67B5DD;
     color: #ffffff;
 }
- 
+
 .nav1{
     padding: 10px;
 }
- 
+
 .nav1 i{
     margin-left: 20px;
 }
- 
+
 /*
     nav
-*/
+*/ 
 .nav{
     grid-area: nav;
     background-color: #ffffff;
     width: 80%;
     margin: 0 auto;
 }
- 
+
 .menu{
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
 }
- 
+
 .logo{
     background: #fff;
 }
- 
+
 .logo img{
     width: 80%;
     height: auto;
 }
- 
+
 .nav2 ul{
     display: flex;
     list-style: none;
     align-content: center;
 }
- 
+
 .nav2 a{
     color: #333;
     font-weight: bold;
@@ -82,11 +82,11 @@ a{
     overflow-wrap: break-word;
     padding: 10px 12px;
 }
- 
+
 .nav2 a:hover {
     color: orange;
 }
- 
+
 .button{
     background-color: #9DBA4C;
     border: none;
@@ -97,28 +97,167 @@ a{
 }
 /*
    slider
-*/
+*/ 
 .slider{
     grid-area: slider;
-    background-color: #F7D716;
+    background: url(../img/PDI_Banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
 }
- 
+
 /*
     section
-*/
+*/ 
 .section{
     grid-area: section;
-    background-color: #F24C4C;
+    background-color: #ffffff;
 }
- 
+
+.articles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.article{
+    border-radius: 15px;
+}
+
+.article span{
+    color: #1ea8da;
+    font-weight: 100;
+    font-size: small;
+    margin-right: 20px;
+}
+
+.article a{
+    background-color: #9DBA4C;
+    border: none;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.article img{
+    width: 100%;
+    border-radius: 15px;
+    opacity: 0.9;
+
+    transition: transform 2s;
+    -moz-transition: transform 2s;
+    -webkit-transition: transform 2s;
+    -o-transition: transform 2s;
+    -ms-transition: transform 2s;
+
+    transition: opacity 1s ease-in-out;
+    -moz-transition: transform 1s ease-in-out;
+    -webkit-transition: transform 1s ease-in-out;
+    -o-transition: transform 1s ease-in-out;
+    -ms-transition: transform 1s ease-in-out;
+}
+
+.article img:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.article .img{
+    border-radius: 15px;
+    overflow: hidden;
+}
 /*
    footer
-*/
+*/ 
 .footer{
     grid-area: footer;
-    background-color: #293462;
+    background-color: #3d9dd8;
+    align-content: center;
+    align-items: center;
 }
- 
+
+.foot{
+    color: #ffffff;
+    text-align: center;
+    height: auto;
+    padding: 20px;
+}
 /******************* MEDIA QUERIES ******************/
- 
- 
+
+@media all and (max-width: 768.99999px){
+    .nav{
+        width: 100%;
+    }
+
+    .menu{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        margin-right: 15px;
+    }
+
+    .nav2 ul li{
+        margin-right: 0;
+    }
+
+    .articles{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 5px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+
+@media all and (max-width: 375.99999px){
+    .menu{
+        align-items: left;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    .nav{
+        width: 100%;
+        margin: auto;
+    }
+
+    .nav2 ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+        text-align: left;
+    }
+
+    .nav2 a{
+        font-weight: lighter;
+        white-space: nowrap;
+    }
+
+    .nav2 ul li{
+        text-align: left;
+    }
+
+    .slider{
+        width: 100%;
+        height: 60px;
+    }
+
+    .articles{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        row-gap: 5px;
+        width: 100%;
+    }
+}
