@@ -1,0 +1,80 @@
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css';
+ 
+header{
+    background-color: #229954;
+}
+ 
+nav{
+    background-color: #1ABC9C;
+    font-size: 1.5rem;
+    width: 100%;
+}
+ 
+nav ul{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+}
+ 
+nav ul li{
+    padding: 0.5rem;
+}
+ 
+nav ul li:hover{
+    padding: 0.5rem;
+    background-color: bisque;
+}
+ 
+#menu{
+    display: none;
+}
+ 
+section{
+    background-color: #21618C;
+}
+ 
+footer{
+    background-color: #DAF7A6;
+}
+ 
+@media all and (max-width: 425.99999px){
+    body{
+        background-color: aqua;
+    }
+ 
+    /*barra en media query*/
+    nav ul{
+        list-style: none;
+        display: none;
+        padding: 10px;
+        z-index: 999;
+        margin-top: -20px;
+    }
+ 
+    #menu{
+        background-color: transparent;
+        display: block;
+        font-size: 2rem;
+        padding: 10px;
+        opacity: 0.5;
+        border: none;
+    }
+ 
+    #menu:hover{
+        opacity: 1;
+        cursor: pointer;
+    }
+ 
+    #menu:active{
+        opacity: 1;
+        cursor: pointer;
+    }
+ 
+    #list{
+        height: 300px;
+    }
+}
+ 
+ 
+ 
+ 
